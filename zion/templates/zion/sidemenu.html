@@ -1,0 +1,35 @@
+<!--Side menu for pc-->
+<h2>Menu</h2>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        <a href="{% url "dashboard" %}" class="fs-5 list_style-none text-decoration-none">Dashboard<i class="ms-3 fa-solid fa-table-columns"></i></a>
+    </li>
+    {% if request.user.is_superuser %}
+    <li class="list-group-item">
+        <a href="{% url "program" %}" class="fs-5 text-decoration-none">Program<i class="ms-3 fa-solid fa-book"></i></a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url "addProgram" %}" class="fs-5 text-decoration-none">Add Program<i class="ms-3 fa-solid fa-book"></i><i class="fa-solid fa-plus" style="font-size:0.7rem"></i></a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url "addStudent" %}" class="fs-5 text-decoration-none">Add Student<i class="ms-3 fa-solid fa-user-plus"></i></a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url "allUsers" %}" class="fs-5 text-decoration-none">User<i class="ms-3 fa-solid fa-users"></i></a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url "message" %}" class="fs-5 text-decoration-none">Messages ({{num_of_unread}})<i class="ms-3 fa-solid fa-envelope"></i></a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url "password_reset" %}" class="fs-5 list_style-none text-decoration-none">Password Reset<i class="ms-3 fa-solid fa-unlock-keyhole"></i><i class="fa-solid fa-gears" style="font-size:0.7rem"></i></a>
+    </li>
+    <li class="list-group-item">
+        <a href="{% url "upload_images" %}" class="fs-5 list_style-none text-decoration-none">Marking<i class="ms-3 fa-solid fa-unlock-keyhole"></i><i class="fa-solid fa-gears" style="font-size:0.7rem"></i></a>
+    </li>
+    {% endif %}
+    
+    <li class="list-group-item">
+        <a href="{% url "password_change" %}" class="fs-5 list_style-none text-decoration-none">Change Password<i class="ms-3 fa-solid fa-unlock-keyhole"></i><i class="fa-solid fa-gears" style="font-size:0.7rem"></i></a>
+    </li>
+</ul>
