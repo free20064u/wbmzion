@@ -20,6 +20,20 @@ load_dotenv(os.path.join(BASE_DIR,'.env'))
 
 ROOT_URLCONF = 'core.urls'
 
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'livereload',
+    'django.contrib.staticfiles',
+    'fontawesomefree',
+    'accounts',
+    'imagekit',
+    'base',
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
