@@ -23,11 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fontawesomefree',
     'accounts',
-    'base',
-    'main',
-    'extraction',
     'imagekit',
-    'marking',
 ]
 
 MIDDLEWARE = [

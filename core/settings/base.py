@@ -18,7 +18,7 @@ load_dotenv(os.path.join(BASE_DIR,'.env'))
 
 
 
-ROOT_URLCONF = 'dueProject.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -31,13 +31,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'main.context_processors.UnreadMessages',
+                #'main.context_processors.UnreadMessages',
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'dueProject.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
