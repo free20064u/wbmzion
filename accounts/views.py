@@ -40,7 +40,7 @@ def loginView(request):
         if user != None:
             login(request, user)
             messages.success(request, 'You have logged in successfully')
-            return redirect('dashboard')
+            return HttpResponse('successfull')
         else:
             context['form'] = UserLoginForm(request.POST)
             messages.error(request, 'Username or password incorrect')

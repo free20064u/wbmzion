@@ -57,7 +57,7 @@ class ProfileUpdateForm(forms.ModelForm):
 
 # A form for login in of users
 class UserLoginForm(forms.ModelForm):
-    username = forms.CharField(label='', widget= forms.TextInput(attrs={'class': 'form-control mb-2 border border-primary', 'placeholder':'Username'}))
+    username = forms.CharField(label='', widget= forms.TextInput(attrs={'class': 'form-control mb-2 border border-primary', 'placeholder':'Email'}))
     password = forms.CharField(label='', widget= forms.PasswordInput(attrs={'class': 'form-control border border-primary', 'placeholder':'Password'}))
     class Meta:
         model = CustomUser

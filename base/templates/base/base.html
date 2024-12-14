@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{% static "base/bootstrap/css/main.min.css" %}">
     <link rel="stylesheet" href="{% static "base/bootstrap/css/myStyle.css" %}">
 </head>
-<body class="bg-secondary" style="min-height:100vh;display:flex;flex-direction:column">
+<body class="bg-white" style="min-height:100vh;display:flex;flex-direction:column">
   <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container">
@@ -39,10 +39,10 @@
                 <a class="nav-link text-lime" href="{% url "logout" %}">Logout</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-lime" href="{% url "editProfile" request.user.id %}">{{ request.user|title }}</a>
+                <a class="nav-link text-lime" href="">{{ request.user|title }}</a>
               </li>
               <li class="nav-item">
-                <a href="{% url "editProfile" request.user.id %}"><img class="rounded-circle" src="{{request.user.imageURL }}" alt="user image" style="width:40px; height:40px"></a>
+                <a href=""><img class="rounded-circle" src="{{request.user.imageURL }}" alt="user image" style="width:40px; height:40px"></a>
               </li>
               {% else %}
               <li class="nav-item">
@@ -87,7 +87,7 @@
     {% if request.user.is_superuser %}
         <div class="d-block d-sm-none col-12 col-sm-3 bg-white p-2 border rounded shadow text-primary fixed-bottom">
             <!--Bottom menu for the mobile interface only-->
-            {% include "main/sidemenuphone.html" %}
+            {% include "zion/sidemenuphone.html" %}
         </div>
     {% endif %}
     <script src="{% static "base/bootstrap/js/bootstrap.bundle.js" %} "></script>
